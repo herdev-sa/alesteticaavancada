@@ -5,44 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aparecida Lima Estética Avançada</title>
 
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <style>
-    /* Configurações da Tela Inteira */
+    /* Configurações Gerais */
     body {
       margin: 0;
-      padding: 20px; /* Um pouco de espaço nas bordas */
+      padding: 20px;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #f2f2f2;
       display: flex;
-      justify-content: center; /* Centraliza horizontalmente */
-      align-items: center;     /* Centraliza verticalmente */
-      min-height: 100vh;       /* Garante que ocupe a altura toda */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
-    /* Configurações da Caixa Branca */
     .container {
       background: #ffffff;
-      padding: 50px 50px;
+      padding: 30px 20px;
       border-radius: 15px;
       width: 100%;
-      max-width: 400px; /* Largura máxima para não esticar demais no PC */
-      margin: 0 auto;   /* Garante a centralização extra */
+      max-width: 400px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    /* Configurações da Logo */
+    /* Logo Ajustada */
     .logo-img {
-      /* O !important força o tamanho a ser respeitado */
-      width: 120px !important; 
+      width: 120px !important;
       height: auto !important;
       display: block;
       margin: 0 auto 15px auto;
     }
 
-    /* Títulos e Textos */
     h1 {
       margin-bottom: 6px;
-      font-size: 1.5rem; /* Leve ajuste para caber melhor */
+      font-size: 1.5rem;
       color: #7a2e45;
     }
 
@@ -52,22 +50,41 @@
       color: #666;
     }
 
-    /* Botões */
+    /* 2. NOVO ESTILO DOS BOTÕES PARA ALINHAR ÍCONES */
     a {
-      display: block;
+      display: flex;              /* Ativa o modo flexível */
+      align-items: center;        /* Centraliza verticalmente */
+      justify-content: flex-start;/* Começa da esquerda */
+      
       text-decoration: none;
       background-color: #e6b8c4;
       color: #4a1f2d;
-      padding: 15px;
+      padding: 15px 20px;         /* Mais espaço nas laterais */
       margin: 10px 0;
       border-radius: 12px;
       font-weight: bold;
       transition: background 0.2s, transform 0.2s;
+      position: relative;         /* Ajuda no alinhamento */
     }
 
     a:hover {
       background-color: #d89aaa;
       transform: scale(1.02);
+    }
+
+    /* Estilo do Ícone (O desenho) */
+    a i {
+      font-size: 1.4rem;  /* Tamanho do ícone */
+      width: 24px;        /* Largura fixa para não bagunçar */
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Estilo do Texto (O nome do botão) */
+    a span {
+      flex-grow: 1;       /* Ocupa o espaço que sobra */
+      text-align: center; /* Centraliza o texto */
+      padding-right: 24px;/* Compensa o espaço do ícone para ficar bem no meio */
     }
 
     footer {
@@ -88,27 +105,27 @@
     <p>Beleza, cuidado e bem-estar</p>
 
     <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ04LBbonOawiktrJKC_FTz7FOinWpLSvPCaCwo22zts3vN095XRguk4909do5ARgWzGUm4pdm64" target="_blank">
-      📅 Agendar Consulta
+      <i class="ph ph-calendar-plus"></i> <span>Agendar Consulta</span>
     </a>
 
     <a href="servicos.html">
-      💆‍♀️ Produtos & Serviços
+      <i class="ph ph-sparkle"></i> <span>Produtos & Serviços</span>
     </a>
 
     <a href="https://www.instagram.com/al_esteticaavancada?igsh=MXRoOHhvbWk0cHdpeA==" target="_blank">
-      📸 Instagram
+      <i class="ph ph-instagram-logo"></i> <span>Instagram</span>
     </a>
 
     <a href="https://wa.me/5579991469399?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
-      💬 WhatsApp
+      <i class="ph ph-whatsapp-logo"></i> <span>WhatsApp</span>
     </a>
 
     <a href="localizacao.html">
-      📍 Localização
+      <i class="ph ph-map-pin"></i> <span>Localização</span>
     </a>
 
     <a href="feedback/index.html">
-      ⭐ Feedback
+      <i class="ph ph-star"></i> <span>Feedback</span>
     </a>
 
     <footer>
