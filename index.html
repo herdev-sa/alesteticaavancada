@@ -8,89 +8,104 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   <style>
-    /* Configurações Gerais */
-    body {
+    /* Zera configurações padrões do navegador */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f2f2;
+      
+      /* 3. COR DO FUNDO ROSA (Igual à página de Feedback) */
+      background-color: #ebaab4; 
+      
+      /* Centraliza o cartão na tela do computador */
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
       background: #ffffff;
-      padding: 30px 20px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 400px;
+      padding: 40px 25px;
+      border-radius: 20px;
+      
+      /* --- O SEGREDO DO RESPONSIVO --- */
+      width: 100%;        /* Ocupa tudo se for pequeno */
+      max-width: 420px;   /* Trava em 420px se for tela grande (PC) */
+      /* ------------------------------- */
+
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Sombra suave */
     }
 
-    /* Logo Ajustada */
+    /* --- LOGO COM TAMANHO TRAVADO --- */
     .logo-img {
-      width: 120px !important;
+      width: 120px !important;    /* Força o tamanho correto */
       height: auto !important;
       display: block;
-      margin: 0 auto 15px auto;
+      margin: 0 auto 15px auto;   /* Centraliza a imagem */
     }
 
     h1 {
-      margin-bottom: 6px;
+      margin: 10px 0 5px 0;
       font-size: 1.5rem;
       color: #7a2e45;
+      line-height: 1.2;
     }
 
     p {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       font-size: 1rem;
       color: #666;
     }
 
-    /* 2. NOVO ESTILO DOS BOTÕES PARA ALINHAR ÍCONES */
+    /* --- ESTILO DOS BOTÕES COM ÍCONE --- */
     a {
-      display: flex;              /* Ativa o modo flexível */
-      align-items: center;        /* Centraliza verticalmente */
-      justify-content: flex-start;/* Começa da esquerda */
-      
+      display: flex;       /* Permite alinhar ícone e texto */
+      align-items: center; /* Centraliza verticalmente */
       text-decoration: none;
-      background-color: #e6b8c4;
-      color: #4a1f2d;
-      padding: 15px 20px;         /* Mais espaço nas laterais */
-      margin: 10px 0;
-      border-radius: 12px;
+      
+      background-color: #e6b8c4; /* Rosa do botão */
+      color: #4a1f2d;            /* Cor da letra */
+      
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-radius: 50px;       /* Bordas redondinhas */
       font-weight: bold;
-      transition: background 0.2s, transform 0.2s;
-      position: relative;         /* Ajuda no alinhamento */
+      transition: transform 0.2s, background 0.2s;
+      border: 1px solid transparent;
     }
 
     a:hover {
-      background-color: #d89aaa;
-      transform: scale(1.02);
+      background-color: #d89aaa;   /* Cor ao passar o mouse */
+      transform: translateY(-2px); /* Efeito de subir */
     }
 
-    /* Estilo do Ícone (O desenho) */
+    /* Área do Ícone */
     a i {
-      font-size: 1.4rem;  /* Tamanho do ícone */
-      width: 24px;        /* Largura fixa para não bagunçar */
+      font-size: 1.4rem;
+      width: 30px;        /* Espaço reservado pro ícone */
       display: flex;
       justify-content: center;
     }
 
-    /* Estilo do Texto (O nome do botão) */
+    /* Área do Texto */
     a span {
-      flex-grow: 1;       /* Ocupa o espaço que sobra */
-      text-align: center; /* Centraliza o texto */
-      padding-right: 24px;/* Compensa o espaço do ícone para ficar bem no meio */
+      flex-grow: 1;       /* Ocupa o resto do espaço */
+      text-align: center; /* Texto centralizado */
+      padding-right: 30px;/* Compensa o ícone pra ficar bem no meio */
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 0.8rem;
-      color: #999;
+      margin-top: 30px;
+      font-size: 0.75rem;
+      color: #888;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -101,31 +116,37 @@
     
     <img src="https://herdev-sa.github.io/feedback/assets/imgs/logo.png" alt="Logo Aparecida Lima" class="logo-img">
 
-    <h1>Aparecida Lima Estética Avançada</h1>
+    <h1>Aparecida Lima<br>Estética Avançada</h1>
     <p>Beleza, cuidado e bem-estar</p>
 
     <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ04LBbonOawiktrJKC_FTz7FOinWpLSvPCaCwo22zts3vN095XRguk4909do5ARgWzGUm4pdm64" target="_blank">
-      <i class="ph ph-calendar-plus"></i> <span>Agendar Consulta</span>
+      <i class="ph ph-calendar-plus"></i>
+      <span>Agendar Consulta</span>
     </a>
 
     <a href="servicos.html">
-      <i class="ph ph-sparkle"></i> <span>Produtos & Serviços</span>
+      <i class="ph ph-sparkle"></i>
+      <span>Produtos & Serviços</span>
     </a>
 
     <a href="https://www.instagram.com/al_esteticaavancada?igsh=MXRoOHhvbWk0cHdpeA==" target="_blank">
-      <i class="ph ph-instagram-logo"></i> <span>Instagram</span>
+      <i class="ph ph-instagram-logo"></i>
+      <span>Instagram</span>
     </a>
 
     <a href="https://wa.me/5579991469399?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">
-      <i class="ph ph-whatsapp-logo"></i> <span>WhatsApp</span>
+      <i class="ph ph-whatsapp-logo"></i>
+      <span>WhatsApp</span>
     </a>
 
     <a href="localizacao.html">
-      <i class="ph ph-map-pin"></i> <span>Localização</span>
+      <i class="ph ph-map-pin"></i>
+      <span>Localização</span>
     </a>
 
     <a href="feedback/index.html">
-      <i class="ph ph-star"></i> <span>Feedback</span>
+      <i class="ph ph-star"></i>
+      <span>Feedback</span>
     </a>
 
     <footer>
