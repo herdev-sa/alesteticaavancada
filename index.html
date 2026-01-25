@@ -1,85 +1,158 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Clínica de Estética</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Estética | Agendamentos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f2f2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .container {
-      background: #ffffff;
-      padding: 30px 20px;
-      border-radius: 15px;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  <!-- Ícones -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    h1 {
-      margin-bottom: 5px;
-      font-size: 1.8rem;
-      color: #333;
-    }
-
-    p {
-      margin-bottom: 25px;
-      font-size: 1rem;
-      color: #666;
-    }
-
-    a {
-      display: block;
-      text-decoration: none;
-      background-color: #e6b8c4;
-      color: #333;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    a:hover {
-      background-color: #d89aaa;
-      transform: scale(1.02);
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 0.8rem;
-      color: #999;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>Clínica de Estética</h1>
-    <p>Beleza, cuidado e bem-estar</p>
+<!-- HEADER -->
+<header class="bg-dark text-white text-center py-4">
+  <h1 class="fw-bold">Clínica de Estética</h1>
+  <p>Cuidando da sua beleza e autoestima</p>
 
-    <a href="agendamento.html">📅 Agendar Consulta</a>
-    <a href="servicos.html">💆‍♀️ Produtos & Serviços</a>
-    <a href="https://www.instagram.com/al_esteticaavancada?igsh=MXRoOHhvbWk0cHdpeA==" target="_blank">📸 Instagram</a>
-    <a href="https://wa.me/5579991469399?text=Olá,%20quero%20agendar%20uma%20consulta" target="_blank">💬 WhatsApp</a>
-    <a href="localizacao.html">📍 Localização</a>
-    <a href="feedback.html">⭐ Feedback</a>
+  <div class="d-flex justify-content-center gap-3 mt-3">
+    <!-- Agendamento Google Agenda -->
+    <a href="https://calendar.google.com/calendar/u/0/r/eventedit"
+       target="_blank"
+       class="btn btn-success">
+      <i class="bi bi-calendar-check"></i> Agendar Atendimento
+    </a>
 
-    <footer>
-      © 2026 – Clínica de Estética
-    </footer>
+    <!-- Localização -->
+    <a href="https://maps.app.goo.gl/1h8xXh7c3LEN4Qv37?g_st=aw"
+       target="_blank"
+       class="btn btn-outline-light">
+      <i class="bi bi-geo-alt-fill"></i> Como chegar
+    </a>
   </div>
+</header>
+
+<!-- CONTEÚDO -->
+<main class="container my-5">
+
+  <!-- TRATAMENTO CORPORAL -->
+  <h2 class="section-title">Tratamentos Corporais</h2>
+
+  <div class="service-card">
+    <h5>Gordura Localizada – Método Crio 40 dias</h5>
+    <p>Resultados progressivos a partir de 30 dias, com efeito máximo entre 60 e 90 dias.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Harmonização de Glúteos</h5>
+    <p>Resultados progressivos com estímulo de colágeno ao longo do tempo.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Flacidez</h5>
+    <p>Tratamento personalizado conforme avaliação profissional.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Gerenciamento de Peso</h5>
+    <p>Equilíbrio entre corpo e mente, focado em saúde e bem-estar.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Tratamento Capilar</h5>
+    <p>Cuidados completos para fios e couro cabeludo.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Celulite</h5>
+    <p>Avaliação profissional para diferenciação estética e clínica.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Harmonização Íntima</h5>
+    <p>Procedimentos estéticos e funcionais minimamente invasivos.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Clareamento Corporal</h5>
+    <p>Uniformização do tom da pele com orientação profissional.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Hipertrofia e Definição Muscular</h5>
+    <p>Plano estratégico para ganho muscular e redução de gordura.</p>
+  </div>
+
+  <!-- TRATAMENTO FACIAL -->
+  <h2 class="section-title mt-5">Tratamentos Faciais</h2>
+
+  <div class="service-card">
+    <h5>Bioestimulador de Colágeno</h5>
+    <p>Estimula colágeno e melhora firmeza da pele.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Toxina Botulínica Full Face</h5>
+    <p>Rejuvenescimento facial completo e harmonioso.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Gerenciamento de Melasma</h5>
+    <p>Tratamento contínuo com acompanhamento dermatológico.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Harmonização Facial</h5>
+    <p>Equilíbrio e naturalidade nos traços do rosto.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Peeling de Hollywood</h5>
+    <p>Limpeza profunda e efeito glow imediato.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Preenchimento Facial e Labial</h5>
+    <p>Restauração de volume e contornos faciais.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Microagulhamento com Drug Delivery</h5>
+    <p>Estimula colágeno e potencializa ativos na pele.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Skinbooster</h5>
+    <p>Hidratação profunda e revitalização da pele.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Fios Sólidos (PDO)</h5>
+    <p>Rejuvenescimento e estímulo de colágeno.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Ultrassom Microfocado</h5>
+    <p>Efeito lifting sem cirurgia.</p>
+  </div>
+
+  <div class="service-card">
+    <h5>Gerenciamento de Pele</h5>
+    <p>Rejuvenescimento, acne, cicatrizes, flacidez e manchas.</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2026 Clínica Estética • Todos os direitos reservados</p>
+</footer>
 
 </body>
 </html>
