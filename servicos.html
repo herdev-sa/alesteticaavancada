@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Produtos & Serviços - Aparecida Lima</title>
+  <title>Produtos & Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -12,7 +12,7 @@
       background-color: #f2f2f2;
       display: flex;
       justify-content: center;
-      padding: 20px 15px;
+      padding: 20px 0;
     }
 
     .container {
@@ -20,21 +20,15 @@
       padding: 30px 20px;
       border-radius: 15px;
       width: 100%;
-      max-width: 550px;
+      max-width: 420px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     h1 {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       font-size: 1.8rem;
       color: #333;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #666;
-      margin-bottom: 25px;
     }
 
     h2 {
@@ -42,199 +36,67 @@
       margin-bottom: 15px;
       font-size: 1.3rem;
       color: #d89aaa;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 5px;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    .service-card {
+    p.intro {
+      font-size: 0.9rem;
+      color: #666;
       margin-bottom: 25px;
-      text-align: left;
-      border-left: 3px solid #e6b8c4;
-      padding-left: 12px;
     }
 
-    .service-title {
+    .service {
       background-color: #e6b8c4;
       color: #333;
-      padding: 8px 12px;
-      border-radius: 6px;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
       font-weight: bold;
       font-size: 0.95rem;
-      display: inline-block;
-      margin-bottom: 5px;
     }
 
     .description {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: #555;
-      margin: 8px 0 12px;
-      line-height: 1.5;
+      margin: 5px 0 10px;
+      line-height: 1.4;
+      padding: 0 10px;
     }
 
-    .actions {
-        text-align: right;
-    }
-
-    .btn-book {
-      display: inline-block;
+    .btn {
+      display: block;
       text-decoration: none;
       background-color: #d89aaa;
       color: #fff;
-      padding: 8px 18px;
-      border-radius: 20px;
+      padding: 12px;
+      margin: 5px 0 25px;
+      border-radius: 10px;
       font-weight: bold;
-      font-size: 0.8rem;
-      transition: all 0.3s;
+      font-size: 0.9rem;
+      transition: transform 0.2s, background-color 0.2s;
     }
 
-    .btn-book:hover {
+    .btn:hover {
+      transform: scale(1.02);
       background-color: #c58696;
-      transform: translateY(-2px);
     }
 
     .btn-back {
-      display: block;
-      text-decoration: none;
-      color: #888;
+      background-color: #888;
       margin-top: 40px;
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .whatsapp-float {
-     position: fixed;
-     bottom: 20px;
-     right: 20px;
-     background-color: #25D366;
-     color: white;
-     padding: 12px 20px;
-     border-radius: 50px;
-     font-size: 14px;
-     font-weight: bold;
-     text-decoration: none;
-     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-     z-index: 999;
-     display: flex;
-     align-items: center;
-     gap: 8px;
     }
   </style>
 </head>
+
 <body>
 
 <div class="container">
   <h1>Produtos & Serviços</h1>
-  <p class="subtitle">Conheça nossos tratamentos corporais e faciais</p>
+  <p class="intro">Conheça nossos tratamentos corporais e faciais</p>
 
   <h2>Procedimentos Corporais</h2>
 
-  <div class="service-card">
-    <div class="service-title">Método Crio 40 dias</div>
-    <p class="description">Programa intenso de criolipólise associado a protocolos de acompanhamento para redução de medidas estratégica.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Harmonização de Glúteos</div>
-    <p class="description">Técnicas com preenchedores e bioestimuladores para melhorar volume, contorno e firmeza do bumbum.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Flacidez Corporal</div>
-    <p class="description">Estímulo de colágeno e elastina para devolver a firmeza à pele do corpo.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Gestão de Peso</div>
-    <p class="description">Protocolos auxiliares para emagrecimento saudável e equilíbrio corporal.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Celulite</div>
-    <p class="description">Procedimentos para melhorar a circulação e suavizar o aspecto de "casca de laranja".</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Secagem de Vasinhos / PEIM</div>
-    <p class="description">Microinjeções para eliminar esteticamente pequenos vasos sanguíneos (aranhas vasculares).</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">MicroStrill (Estrias)</div>
-    <p class="description">Técnica para regenerar a pele e tornar as estrias menos visíveis.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Harmonização Íntima & Clareamento</div>
-    <p class="description">Estética para região íntima e tratamentos para remover manchas em axilas e virilhas.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <h2>Procedimentos Faciais</h2>
-
-  <div class="service-card">
-    <div class="service-title">Toxina (Botox)</div>
-    <p class="description">Injeções para relaxar músculos faciais e suavizar rugas de expressão.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Bioestimulador de Colágeno</div>
-    <p class="description">Tratamento para flacidez facial e melhora da espessura da pele.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Harmonização Facial</div>
-    <p class="description">Equilíbrio das proporções do rosto para realçar sua beleza natural.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Peeling de Hollywood</div>
-    <p class="description">Laser com carvão ativado para fechar poros e iluminar a pele instantaneamente.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Skinbooster & Microagulhamento</div>
-    <p class="description">Hidratação profunda e renovação da pele com drug delivery de ativos.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Ultrassom Microfocado & Fios</div>
-    <p class="description">Tecnologia e fios de sustentação para combate à flacidez e efeito lifting.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <div class="service-card">
-    <div class="service-title">Gerenciamento de Melasma & Pele</div>
-    <p class="description">Controle de manchas e tratamento global para acne e rejuvenescimento.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <h2>Saúde Capilar</h2>
-  <div class="service-card">
-    <div class="service-title">Tratamento Capilar</div>
-    <p class="description">Terapias para combater a queda, fortalecer os fios e estimular o crescimento.</p>
-    <div class="actions"><a href="#" class="btn-book">Agende seu atendimento</a></div>
-  </div>
-
-  <a href="#" class="btn-back">← Voltar</a>
-</div>
-
-<a href="https://wa.me/SEUNUMERO" class="whatsapp-float" target="_blank">
-  <span>WhatsApp</span>
-</a>
-
-</body>
-</html>
+  <div class="service">Método Crio 40 dias (Gordura localizada)</div>
+  <div class="description">Um programa intenso que utiliza a criolipólise associada a protocolos de acompanhamento para reduzir medidas de forma estratégica.</div>
+  <a class="btn" href="agendamento.html">Agende
