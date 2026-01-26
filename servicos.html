@@ -1,168 +1,194 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços Estéticos | Realce sua Beleza</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #b07d7d; /* Tom rosé da imagem */
-            --secondary-color: #f9f4f2;
-            --text-dark: #4a4a4a;
-            --white: #ffffff;
-            --accent: #d4a3a3;
-        }
+  <meta charset="UTF-8">
+  <title>Produtos & Serviços - Aparecida Lima</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --cor-fundo: #fdf6f4; /* Tom levemente rosado para o fundo */
+      --cor-texto-titulo: #7a5a52; /* Tom marrom rosado da imagem */
+      --cor-card: #f8e8e4; /* Fundo dos cards */
+      --cor-botao: #b08279; /* Cor do botão */
+      --cor-botao-texto: #ffffff;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--secondary-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--cor-fundo);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background-color: var(--white);
-        }
+    .main-container {
+      width: 100%;
+      max-width: 1100px;
+      text-align: center;
+    }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
+    h1 {
+      color: var(--cor-texto-titulo);
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .subtitle {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 50px;
+    }
 
-        .section-title {
-            text-align: center;
-            margin: 40px 0 20px;
-            font-size: 1.8rem;
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            width: 100%;
-            padding-bottom: 10px;
-        }
+    h2 {
+      color: var(--cor-texto-titulo);
+      font-size: 1.8rem;
+      margin: 40px 0 30px;
+      position: relative;
+    }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
+    /* Estrutura de Grid para os Cards */
+    .grid-procedimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
 
-        .card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    /* Estilo do Card Individual */
+    .card {
+      background-color: var(--cor-card);
+      border-radius: 20px;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-        .card h3 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
+    .service-img {
+      width: 100%;
+      height: 200px; /* Altura fixa para alinhar as fotos */
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      background-color: #ddd; /* Placeholder se não houver foto */
+    }
 
-        .card p {
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            color: #666;
-        }
+    .service-title {
+      color: var(--cor-texto-titulo);
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      min-height: 50px; /* Garante alinhamento se o nome for longo */
+      display: flex;
+      align-items: center;
+    }
 
-        .btn-agendar {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: background 0.3s;
-        }
+    .description {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      flex-grow: 1; /* Empurra o botão para o final do card */
+    }
 
-        .btn-agendar:hover {
-            background-color: #8e6262;
-        }
+    .btn-agendar {
+      display: inline-block;
+      text-decoration: none;
+      background-color: var(--cor-botao);
+      color: var(--cor-botao-texto);
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: var(--white);
-            margin-top: 50px;
-            font-size: 0.8rem;
-        }
+    .btn-agendar:hover {
+      opacity: 0.9;
+    }
 
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-        }
-    </style>
+    .btn-voltar {
+      margin-top: 40px;
+      display: inline-block;
+      color: var(--cor-texto-titulo);
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Produtos & Serviços</h1>
-        <p>Conheça nossos tratamentos corporais e faciais personalizados.</p>
-    </header>
+<div class="main-container">
+  <h1>Produtos & Serviços</h1>
+  <p class="subtitle">Conheça nossos tratamentos corporais e faciais personalizados.</p>
 
-    <div class="container">
-        
-        <h2 class="section-title">Procedimentos Corporais</h2>
-        <div class="services-grid">
-            <div class="card">
-                <h3>Método Crio 40 dias</h3>
-                <p>Programa intenso de criolipólise para redução estratégica de medidas e gordura localizada.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-            <div class="card">
-                <h3>Harmonização de Glúteos</h3>
-                <p>Uso de bioestimuladores e preenchedores para melhorar volume, contorno e firmeza.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-            <div class="card">
-                <h3>Flacidez Corporal</h3>
-                <p>Estímulo de colágeno e elastina para devolver a firmeza e sustentação da pele.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-            <div class="card">
-                <h3>Gestão de Peso</h3>
-                <p>Protocolos auxiliares focados em emagrecimento saudável e equilíbrio corporal.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-            <div class="card">
-                <h3>Secagem de Vasinhos (PEIM)</h3>
-                <p>Microinjeções para eliminar esteticamente pequenos vasos sanguíneos e aranhas vasculares.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-            <div class="card">
-                <h3>MicroStrill (Estrias)</h3>
-                <p>Técnica regenerativa para tornar estrias menos visíveis através da produção de novo tecido.</p>
-                <a href="#" class="btn-agendar">Agende seu atendimento</a>
-            </div>
-        </div>
+  <h2>Procedimentos Corporais</h2>
+  
+  <div class="grid-procedimentos">
+    <div class="card">
+      <div class="service-title">Método Crio 40 dias</div>
+      <img src="assets/imgs/crio.jpg" alt="Método Crio" class="service-img">
+      <div class="description">Programa intenso de criolipólise para redução estratégica de medidas e gordura localizada.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
 
-        <h2 class="section-title">Procedimentos Faciais & Injetáveis</h2>
-        <div class="services-grid">
-            <div class="
+    <div class="card">
+      <div class="service-title">Harmonização de Glúteos</div>
+      <img src="assets/imgs/gluteos.jpg" alt="Harmonização de Glúteos" class="service-img">
+      <div class="description">Uso de bioestimuladores e preenchedores para melhorar volume, contorno e firmeza.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+
+    <div class="card">
+      <div class="service-title">Flacidez Corporal</div>
+      <img src="assets/imgs/flacidez.jpg" alt="Flacidez Corporal" class="service-img">
+      <div class="description">Estímulo de colágeno e elastina para devolver a firmeza e sustentação da pele.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+
+    <div class="card">
+      <div class="service-title">Gestão de Peso</div>
+      <img src="assets/imgs/peso.jpg" alt="Gestão de Peso" class="service-img">
+      <div class="description">Protocolos auxiliares focados em emagrecimento saudável e equilíbrio corporal.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+
+    <div class="card">
+      <div class="service-title">Secagem de Vasinhos (PEIM)</div>
+      <img src="assets/imgs/peim.jpg" alt="PEIM" class="service-img">
+      <div class="description">Microinjeções para eliminar esteticamente pequenos vasos sanguíneos e aranhas vasculares.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+
+    <div class="card">
+      <div class="service-title">MicroStrill (Estrias)</div>
+      <img src="assets/imgs/estrias.jpg" alt="MicroStrill" class="service-img">
+      <div class="description">Técnica regenerativa para tornar estrias menos visíveis através da produção de novo tecido.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+  </div>
+
+  <h2>Procedimentos Faciais & Injetáveis</h2>
+  
+  <div class="grid-procedimentos">
+    <div class="card">
+      <div class="service-title">Toxina Botulínica</div>
+      <img src="assets/imgs/botox.jpg" alt="Toxina" class="service-img">
+      <div class="description">Relaxamento muscular para suavizar rugas de expressão e prevenir novas marcas.</div>
+      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
+    </div>
+  </div>
+
+  <a class="btn-voltar" href="index.html">⬅ Voltar</a>
+</div>
+
+</body>
+</html>
