@@ -7,11 +7,11 @@
 
   <style>
     :root {
-      --cor-fundo: #fdf6f4; 
-      --cor-texto-titulo: #7a5a52; 
-      --cor-card: #f8e8e4; 
-      --cor-botao: #b08279; 
-      --cor-botao-texto: #ffffff;
+      /* Cores baseadas na sua página principal */
+      --cor-fundo: #ffffff; 
+      --cor-texto-marrom: #5c2d3a; /* Tom marrom rosado da sua logo */
+      --cor-rosa-botao: #e1b6bc; /* Rosa suave dos botões */
+      --cor-rosa-card: #f9ecee; /* Rosa bem claro para o fundo dos cards */
     }
 
     body {
@@ -29,24 +29,35 @@
       text-align: center;
     }
 
+    /* Estilo da Logo */
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-img {
+      max-width: 180px; /* Tamanho proporcional à página principal */
+      height: auto;
+    }
+
     h1 {
-      color: var(--cor-texto-titulo);
-      font-size: 2.5rem;
+      color: var(--cor-texto-marrom);
+      font-size: 2.2rem;
       margin-bottom: 5px;
     }
 
     .subtitle {
-      color: #666;
+      color: var(--cor-texto-marrom);
       font-size: 1rem;
       margin-bottom: 50px;
+      opacity: 0.8;
     }
 
     h2 {
-      color: var(--cor-texto-titulo);
-      font-size: 1.8rem;
+      color: var(--cor-texto-marrom);
+      font-size: 1.6rem;
       margin: 40px 0 30px;
-      border-bottom: 1px solid #e2d1cc;
-      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .grid-procedimentos {
@@ -57,13 +68,13 @@
     }
 
     .card {
-      background-color: var(--cor-card);
-      border-radius: 20px;
+      background-color: var(--cor-rosa-card);
+      border-radius: 25px; /* Bordas bem arredondadas como na imagem */
       padding: 30px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
       transition: transform 0.3s ease;
     }
 
@@ -75,58 +86,64 @@
       width: 100%;
       height: 220px;
       object-fit: cover;
-      border-radius: 15px;
+      border-radius: 20px;
       margin-bottom: 15px;
-      background-color: #e2d1cc;
+      background-color: #f2e1e4;
     }
 
     .service-title {
-      color: var(--cor-texto-titulo);
+      color: var(--cor-texto-marrom);
       font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      min-height: 50px;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      min-height: 40px;
       display: flex;
       align-items: center;
-      text-align: center;
     }
 
     .description {
-      font-size: 0.95rem;
-      color: #555;
+      font-size: 0.9rem;
+      color: var(--cor-texto-marrom);
       line-height: 1.5;
       margin-bottom: 25px;
       flex-grow: 1;
+      opacity: 0.9;
     }
 
     .btn-agendar {
       display: inline-block;
       text-decoration: none;
-      background-color: var(--cor-botao);
-      color: var(--cor-botao-texto);
-      padding: 12px 30px;
-      border-radius: 25px;
-      font-weight: 500;
+      background-color: var(--cor-rosa-botao);
+      color: var(--cor-texto-marrom);
+      padding: 14px 35px;
+      border-radius: 30px; /* Botões pílula como os da home */
+      font-weight: bold;
       font-size: 0.9rem;
-      transition: opacity 0.2s;
+      transition: background-color 0.2s;
     }
 
     .btn-agendar:hover {
-      opacity: 0.9;
+      background-color: #d6a4ab;
     }
 
     .btn-voltar {
       margin-top: 40px;
       display: inline-block;
-      color: var(--cor-texto-titulo);
+      color: var(--cor-texto-marrom);
       text-decoration: none;
       font-weight: bold;
+      border-bottom: 1px solid var(--cor-texto-marrom);
     }
   </style>
 </head>
 <body>
 
 <div class="main-container">
+  
+  <div class="logo-container">
+    <img src="assets/imgs/logo.png" alt="Aparecida Lima Estética Avançada" class="logo-img">
+  </div>
+
   <h1>Produtos & Serviços</h1>
   <p class="subtitle">Conheça nossos tratamentos corporais e faciais personalizados.</p>
 
@@ -154,147 +171,9 @@
       <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
     </div>
 
-    <div class="card">
-      <div class="service-title">Gestão de Peso</div>
-      <img src="assets/imgs/peso.jpg" alt="Gestão de Peso" class="service-img">
-      <div class="description">Protocolos com orientações e procedimentos auxiliares para ajudar no emagrecimento saudável.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
     </div>
 
-    <div class="card">
-      <div class="service-title">Tratamento Capilar</div>
-      <img src="assets/imgs/capilar.jpg" alt="Tratamento Capilar" class="service-img">
-      <div class="description">Terapias para combater a queda, fortalecer os fios e estimular o crescimento capilar.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Celulite</div>
-      <img src="assets/imgs/celulite.jpg" alt="Celulite" class="service-img">
-      <div class="description">Procedimentos que melhoram a circulação, quebram nódulos de gordura e suavizam o aspecto de casca de laranja.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Harmonização Íntima</div>
-      <img src="assets/imgs/intima.jpg" alt="Harmonização Íntima" class="service-img">
-      <div class="description">Procedimentos estéticos para melhorar a aparência, pigmentação ou firmeza da região íntima.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Clareamento Corporal</div>
-      <img src="assets/imgs/clareamento.jpg" alt="Clareamento" class="service-img">
-      <div class="description">Tratamentos com peelings ou lasers para remover manchas em axilas, virilhas ou joelhos.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Secagem de Vasinho / PEIM</div>
-      <img src="assets/imgs/peim.jpg" alt="PEIM" class="service-img">
-      <div class="description">Microinjeções de substâncias esclerosantes para eliminar esteticamente pequenos vasos sanguíneos.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">MicroStrill (Estrias)</div>
-      <img src="assets/imgs/estrias.jpg" alt="MicroStrill" class="service-img">
-      <div class="description">Técnica que visa regenerar a pele e produzir novo tecido para tornar as estrias menos visíveis.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Hipertrofia e Definição Muscular</div>
-      <img src="assets/imgs/muscular.jpg" alt="Hipertrofia" class="service-img">
-      <div class="description">Uso de tecnologias para auxiliar no ganho de massa magra e tonificação muscular.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-  </div>
-
-  <h2>Procedimentos Faciais e Injetáveis</h2>
-  <div class="grid-procedimentos">
-
-    <div class="card">
-      <div class="service-title">Bioestimulador de Colágeno</div>
-      <img src="assets/imgs/bioestimulador.jpg" alt="Bioestimulador" class="service-img">
-      <div class="description">Injetáveis que estimulam a produção de colágeno, tratando a flacidez e melhorando a espessura da pele.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Toxina (Botox)</div>
-      <img src="assets/imgs/botox.jpg" alt="Botox" class="service-img">
-      <div class="description">Injeções que relaxam os músculos faciais para suavizar rugas de expressão e prevenir novas marcas.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Gerenciamento de Melasma</div>
-      <img src="assets/imgs/melasma.jpg" alt="Melasma" class="service-img">
-      <div class="description">Protocolos focados na despigmentação e estabilização para controlar manchas escuras na pele.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Harmonização Facial</div>
-      <img src="assets/imgs/harmonizacao.jpg" alt="Harmonização Facial" class="service-img">
-      <div class="description">Conjunto de preenchimentos para equilibrar as proporções do rosto e realçar a beleza natural.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Limpeza de Pele</div>
-      <img src="assets/imgs/limpeza.jpg" alt="Limpeza de Pele" class="service-img">
-      <div class="description">Procedimento para remoção de impurezas e cravos, mantendo a saúde e o brilho da face.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Peeling de Hollywood</div>
-      <img src="assets/imgs/hollywood.jpg" alt="Peeling Hollywood" class="service-img">
-      <div class="description">Tratamento a laser com máscara de carvão que fecha poros e ilumina a pele instantaneamente.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Microagulhamento / Drug Delivery</div>
-      <img src="assets/imgs/microagulhamento.jpg" alt="Microagulhamento" class="service-img">
-      <div class="description">Microagulhas que facilitam a entrada de ativos rejuvenescedores ou clareadores na pele.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Skinbooster</div>
-      <img src="assets/imgs/skinbooster.jpg" alt="Skinbooster" class="service-img">
-      <div class="description">Hidratação profunda injetável que melhora o viço, a elasticidade e a qualidade da pele.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Fios Facial</div>
-      <img src="assets/imgs/fios.jpg" alt="Fios Facial" class="service-img">
-      <div class="description">Fios de sustentação que promovem efeito lifting imediato e estímulo contínuo de colágeno.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Ultrassom Microfocado</div>
-      <img src="assets/imgs/ultrassom.jpg" alt="Ultrassom" class="service-img">
-      <div class="description">Tecnologia que promove retração e combate à flacidez profunda sem necessidade de cortes.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-    <div class="card">
-      <div class="service-title">Gerenciamento de Pele</div>
-      <img src="assets/imgs/gerenciamento.jpg" alt="Gerenciamento Pele" class="service-img">
-      <div class="description">Tratamento global e personalizado para acne, cicatrizes e sinais de envelhecimento.</div>
-      <a class="btn-agendar" href="agendamento.html">Agende seu atendimento</a>
-    </div>
-
-  </div>
-
-  <a class="btn-voltar" href="index.html">⬅ Voltar</a>
+  <a class="btn-voltar" href="index.html">⬅ Voltar ao Início</a>
 </div>
 
 </body>
